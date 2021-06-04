@@ -21,13 +21,13 @@ public class AvgPeriod implements AvgPeriodMBean{
     }
 
     @Override
-    public String getAverageTime() {
-        long time = 0;
+    public double getAverageTime() {
+        double time = 0;
 
         for (long period : periods) {
             time += period;
         }
 
-        return time / (periods.size()) + " milliseconds";
+        return time / (periods.size());
     }
 }
