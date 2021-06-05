@@ -102,7 +102,7 @@ class H {
         try {
             java.net.URI url = new java.net.URI(s);
             if(!cache.containsKey(url)) {
-                cache.put(url, new byte[1572864]);
+                cache.put(url, new byte[2048]);
             }
             return cache.get(url);
         } catch (Exception e) {
